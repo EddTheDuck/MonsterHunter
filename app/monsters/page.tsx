@@ -1,4 +1,4 @@
-import getMonsters from "@/api/api";
+import { getMonsters } from "@/api/api";
 
 interface Monster {
   id: number;
