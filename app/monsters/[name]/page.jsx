@@ -12,7 +12,6 @@ export default function allMonsters() {
       setMonster(result[0]);
     });
   }, [name]);
-  console.log(monster);
 
   return (
     <div>
