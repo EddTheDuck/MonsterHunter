@@ -23,9 +23,10 @@ export default async function AllMonsters() {
                 className="border-solid border-4 rounded-full border-sky-500 hover:border-sky-100 text-center hover:bg-sky-500"
               >
                 <div className="flex justify-center ">
+                  console.log(name)
                   <Image
                     className="justify-center"
-                    src={`/images/MH3U-Barroth_Icon.png`}
+                    src={`/images/${name}_Icon.png`}
                     alt="Image"
                     width={100}
                     height={100}

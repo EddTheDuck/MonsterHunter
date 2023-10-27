@@ -1,10 +1,5 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -21,15 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/monsters/loading.js"
     ],
-    "/monsters/[name]/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/monsters/[name]/page.js"
+      "static/chunks/app/page.js"
     ],
-    "/monsters/[name]/loading": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/monsters/[name]/loading.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }
