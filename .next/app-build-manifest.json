@@ -21,6 +21,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/monsters/[name]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/monsters/[name]/page.js"
+    ],
+    "/monsters/[name]/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/monsters/[name]/loading.js"
+    ],
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
