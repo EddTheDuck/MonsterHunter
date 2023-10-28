@@ -1,11 +1,19 @@
 "use client";
+import { MonsterProps } from "@/Types/types";
 import { getMonstersByName } from "@/api/api";
 import { Monster } from "@/components/Monster";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default async function MonsterByName() {
+export default function MonsterByName() {
   const { name } = useParams() as { name: string };
+  const [monster, setMonster] = useState<MonsterProps | undefined>();
 
-  const monster = await getMonstersByName(name);
-  return <Monster {...monster[0]} />;
+  useEffect(() => {
+    getMonstersByName(name).then((monster) => {
+      setMonster(monster[0]);
+    });
+  }, [name]);
+
+  return monster ? <Monster {...monster} /> : undefined;
 }

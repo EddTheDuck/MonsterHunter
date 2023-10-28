@@ -24,7 +24,7 @@ export default async function AllMonsters() {
                   <Image
                     className="justify-center"
                     src={`/images/${name}_Icon.png`}
-                    alt="Image"
+                    alt={`Icon of ${name}`}
                     width={100}
                     height={100}
                   />
