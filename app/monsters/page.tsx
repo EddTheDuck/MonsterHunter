@@ -1,13 +1,7 @@
 import { getMonsters } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
-
-interface Monster {
-  id: number;
-  type: "large" | "small";
-  name: string;
-  species: string;
-}
+import { Monster } from "@/Types/types";
 
 export default async function AllMonsters() {
   const monsters = await getMonsters("", "");
