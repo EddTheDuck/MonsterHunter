@@ -1,13 +1,7 @@
 import { MonsterProps } from "@/Types/types";
 import Image from "next/image";
 
-export function Monster({
-  id,
-  name,
-  type,
-  species,
-  description,
-}: MonsterProps) {
+export function Monster({ name, type, species, description }: MonsterProps) {
   return (
     <section
       className=" border-solid border-4 rounded-lg

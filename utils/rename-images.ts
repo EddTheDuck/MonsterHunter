@@ -3,11 +3,11 @@
 
 // const directoryPath = path.join(process.cwd(), "public/images"); // Adjust the folder path as needed
 
-// function renameFilesInDirectory(directoryPath) {
+// function renameFilesInDirectory(directoryPath: string) {
 //   try {
 //     const files = fs.readdirSync(directoryPath);
 
-//     files.forEach((file) => {
+//     files.forEach((file: string) => {
 //       if (file.includes("-")) {
 //         const parts = file.split("-");
 //         const newName = parts.slice(1).join("-").trim();
@@ -19,7 +19,7 @@
 //       }
 //     });
 //   } catch (error) {
-//     console.error("Error:", error.message);
+//     console.error("Error:", error);
 //   }
 // }
 
