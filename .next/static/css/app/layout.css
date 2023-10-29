@@ -597,9 +597,6 @@ video {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.box-border {
-  box-sizing: border-box;
-}
 .flex {
   display: flex;
 }
@@ -609,24 +606,26 @@ video {
 .h-auto {
   height: auto;
 }
+.min-h-full {
+  min-height: 100%;
+}
 .w-5\/6 {
   width: 83.333333%;
 }
 .w-auto {
   width: auto;
 }
-.w-96 {
-  width: 24rem;
-}
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .items-center {
   align-items: center;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
