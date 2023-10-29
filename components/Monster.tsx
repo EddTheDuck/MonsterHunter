@@ -10,10 +10,12 @@ export function Monster({ name, type, species, description }: MonsterProps) {
       <h1 className="text-2xl">{name}</h1>
       <div className="flex justify-center">
         <Image
+          className="w-auto h-auto"
           src={`/images/${name}_Icon.png`}
           alt={`Icon of ${name}`}
           width={200}
           height={200}
+          priority
         />
       </div>
       <ul>

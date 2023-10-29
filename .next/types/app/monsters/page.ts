@@ -1,4 +1,4 @@
-// File: /Users/eggaholic/GitHub/Coder/Projects/MonsterHunter/app/monsters/page.tsx
+// File: /Users/edd-nc/Northcoders/Projects/MonsterHunter/app/monsters/page.tsx
 import * as entry from '../../../../app/monsters/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

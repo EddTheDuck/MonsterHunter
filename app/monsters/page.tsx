@@ -22,11 +22,12 @@ export default async function AllMonsters() {
               >
                 <div className="flex justify-center">
                   <Image
-                    className="justify-center"
+                    className="justify-center h-auto w-auto"
                     src={`/images/${name}_Icon.png`}
                     alt={`Icon of ${name}`}
                     width={100}
                     height={100}
+                    priority
                   />
                 </div>
                 <h2 className="text-2xl">{name}</h2>
