@@ -2,7 +2,6 @@ import { MonsterProps } from "@/Types/types";
 import Image from "next/image";
 
 export function Monster({ name, type, species, description }: MonsterProps) {
-  console.log(name);
   return (
     <section
       className=" border-solid border-4 rounded-lg
