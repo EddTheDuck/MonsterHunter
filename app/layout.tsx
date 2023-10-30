@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Merriweather_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const merriweather_sans = Merriweather_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Monster Hunter DB",
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-slate-900 text-slate-100 container mx-auto p-4`}
+        className={`${merriweather_sans.className} bg-stone-200 text-stone-800 container mx-auto p-4`}
       >
         {children}
       </body>
