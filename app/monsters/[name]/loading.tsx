@@ -1,4 +1,5 @@
-"use client";
+import ItIsLoading from "@/components/Loading";
+
 export default function Loading() {
-  return <p>Loading!!!!!</p>;
+  return <ItIsLoading />;
 }
