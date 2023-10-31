@@ -12,3 +12,11 @@ export interface Monster {
   name: string;
   species: string;
 }
+
+export interface Weapon {
+  id: number;
+  type: "great-sword" | "long-sword" | "sword-and-shield" | "dual-blades" | "hammer" | "hunting-horn" | "lance" | "gunlance" | "switch-axe" | "charge-blade" | "insect-glaive" | "light-bowgun" | "heavy-bowgun" | "bow";
+  name: string;
+  rarity: number;
+  assets:  {icon?: string | null;} ;
+}
