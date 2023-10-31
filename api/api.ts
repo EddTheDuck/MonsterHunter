@@ -26,7 +26,7 @@ export async function getMonstersByName(name: string) {
 }
 
 export async function getWeapons() {
-  let path = "https://mhw-db.com/weapons"
+  let path = `https://mhw-db.com/weapons?q={"type": "great-sword"}`
   const res = await axios.get(path)
   return res.data
 }

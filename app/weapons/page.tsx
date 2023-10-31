@@ -10,9 +10,8 @@ export default async function AllWeapons() {
     <div>
       <h1 className="text-2xl">All Weapons</h1>
       <ul className="grid grid-cols-4 gap-5">
-        {weapons.map(({ id, name, assets }: Partial<Weapon>) => {
+        {weapons.map(({ id, name, assets }: Weapon) => {
              const icon = assets?.icon ? assets.icon : "/images/0noImg.jpg"
-             console.log(id)
           return (
             <Link href={`/weapons/${name}`}>
               <li
@@ -20,14 +19,18 @@ export default async function AllWeapons() {
                 className="border-solid border-4 rounded-lg
                border-stone-500 hover:border-stone-100 hover:bg-stone-500 min-h-full flex flex-col justify-end items-center"
               >
-                  <Image
-                    className="h-100 w-100"
+              <div className="h-50 w-50">
+              <Image
+                    className="h-auto w-auto"
                     src={icon}
                     alt={`Icon of ${name}`}
-                    width={100}
-                    height={100}
+                    width={50}
+                    height={50}
                     priority
+                    placeholder="empty"
                   />
+              </div>
+                 
                 <h2 className="text-2xl">{name}</h2>
               </li>
             </Link>
