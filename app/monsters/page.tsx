@@ -6,9 +6,9 @@ import { Monster } from "@/Types/types";
 
 export default async function AllMonsters() {
   const monsters = await getMonsters("", "");
-  const breadcrumbLinks: [{ text: string; href: string }, { text: string }] = [
+  const breadcrumbLinks: [{ text: "Home"; href: "/" }, { text: "Monsters" }] = [
     { text: "Home", href: "/" },
-    { text: "monsters" },
+    { text: "Monsters" },
   ];
 
   return (

@@ -10,12 +10,12 @@ export default function MonsterByName() {
   const { name } = useParams() as { name: string };
   const [monster, setMonster] = useState<MonsterProps | undefined>();
   const breadcrumbLinks: [
-    { text: string; href: string },
-    { text: string; href: string },
+    { text: "Home"; href: "/" },
+    { text: "Monsters"; href: "/monsters" },
     { text: string }
   ] = [
     { text: "Home", href: "/" },
-    { text: "monsters", href: "/monsters" },
+    { text: "Monsters", href: "/monsters" },
     { text: `${name}` },
   ];
 
