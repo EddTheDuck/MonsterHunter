@@ -45,3 +45,12 @@ interface assets {
   imageMale: string;
   imageFemale: string;
 }
+
+export interface BreadcrumbItem {
+  text: string;
+  href?: string;
+}
+
+export interface BreadcrumbProps {
+  links: BreadcrumbItem[];
+}

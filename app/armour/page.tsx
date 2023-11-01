@@ -10,10 +10,6 @@ export default async function AllArmour() {
       <h1 className="text-2xl">Armour Pieces</h1>
       <ul className="grid grid-cols-4 gap-5">
         {armour.map(({ id, name, assets }: Armour) => {
-          const maleImage = assets?.imageMale
-            ? assets.imageMale
-            : "/images/0noImg.jpg";
-
           return (
             <Link href={`/armour/${name}`}>
               <li
@@ -24,7 +20,11 @@ export default async function AllArmour() {
                 <div className=" flex h-50 w-50">
                   <Image
                     className="h-auto w-auto"
-                    src={maleImage}
+                    src={
+                      assets?.imageMale
+                        ? assets.imageMale
+                        : "/images/0noImg.jpg"
+                    }
                     alt={`Icon of ${name}`}
                     width={50}
                     height={50}
