@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/weapons/**",
       },
+      {
+        protocol: "https",
+        hostname: "assets.mhw-db.com",
+        port: "",
+        pathname: "/armor/**",
+      },
     ],
   },
 };

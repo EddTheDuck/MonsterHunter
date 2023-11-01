@@ -11,6 +11,18 @@ export default function Home() {
       >
         All Monsters
       </Link>
+      <Link
+        className="border border-stone-500 text-stone-800 px-2 py-1 rounded hover:bg-stone-800 hover:text-stone-200 focus-within: bg-skate-700"
+        href={"/weapons"}
+      >
+        Weapons
+      </Link>
+      <Link
+        className="border border-stone-500 text-stone-800 px-2 py-1 rounded hover:bg-stone-800 hover:text-stone-200 focus-within: bg-skate-700"
+        href={"/armour"}
+      >
+        Armour
+      </Link>
     </>
   );
 }
