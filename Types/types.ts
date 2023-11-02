@@ -54,3 +54,4 @@ export interface BreadcrumbItem {
 export interface BreadcrumbProps {
   links: BreadcrumbItem[];
 }
+export type BreadCrumbs = BreadcrumbItem[];
