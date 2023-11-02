@@ -35,3 +35,7 @@ export async function getArmour() {
   const res = await axios.get(`https://mhw-db.com/armor?q={"type": "head"}`);
   return res.data;
 }
+export async function getArmourByName(name: string) {
+  const res = await axios.get(`https://mhw-db.com/armor?q={"name": "${name}"}`);
+  return res.data;
+}

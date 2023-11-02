@@ -14,12 +14,12 @@ export default async function AllArmour() {
     <div>
       <Breadcrumb links={breadcrumbLinks} />
       <h1 className="text-2xl">Armour Pieces</h1>
-      <ul className="grid grid-cols-4 gap-5">
-        {armour.map(({ id, name, assets }: Armour) => {
+      <ul key={armour.id} className="grid grid-cols-4 gap-5">
+        {armour.map(({ name, assets }: Armour) => {
           return (
             <Link href={`/armour/${name}`}>
               <li
-                key={id}
+                key={armour.id}
                 className="border-solid border-4 rounded-lg
                border-stone-500 hover:border-stone-100 hover:bg-stone-500 min-h-full flex flex-col justify-end items-center"
               >

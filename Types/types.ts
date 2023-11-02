@@ -46,6 +46,12 @@ interface assets {
   imageFemale: string;
 }
 
+export interface ArmourProps extends Armour {
+  type: string;
+  rank: string;
+  rarity: number;
+  assets: assets;
+}
 export interface BreadcrumbItem {
   text: string;
   href?: string;
