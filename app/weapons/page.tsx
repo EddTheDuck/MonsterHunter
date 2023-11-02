@@ -1,12 +1,12 @@
 import { getWeapons } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
-import { Weapon } from "@/Types/types";
+import { Weapon, Breadcrumbs } from "@/Types/types";
 import { Breadcrumb } from "@/components/Breadcrumb";
 
 export default async function AllWeapons() {
   const weapons = await getWeapons();
-  const breadcrumbLinks: [{ text: "Home"; href: "/" }, { text: "Weapons" }] = [
+  const breadcrumbLinks: Breadcrumbs = [
     { text: "Home", href: "/" },
     { text: "Weapons" },
   ];

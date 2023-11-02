@@ -2,11 +2,11 @@ import { getMonsters } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { BreadCrumbs, Monster } from "@/Types/types";
+import { Breadcrumbs, Monster } from "@/Types/types";
 
 export default async function AllMonsters() {
   const monsters = await getMonsters("", "");
-  const breadcrumbLinks: BreadCrumbs = [
+  const breadcrumbLinks: Breadcrumbs = [
     { text: "Home", href: "/" },
     { text: "Monsters" },
   ];
