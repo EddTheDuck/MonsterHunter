@@ -2,11 +2,17 @@ import { getArmour } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Armour } from "@/Types/types";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 export default async function AllArmour() {
   const armour = await getArmour();
+  const breadcrumbLinks: [{ text: "Home"; href: "/" }, { text: "Armour" }] = [
+    { text: "Home", href: "/" },
+    { text: "Armour" },
+  ];
   return (
     <div>
+      <Breadcrumb links={breadcrumbLinks} />
       <h1 className="text-2xl">Armour Pieces</h1>
       <ul className="grid grid-cols-4 gap-5">
         {armour.map(({ id, name, assets }: Armour) => {

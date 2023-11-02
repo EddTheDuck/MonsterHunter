@@ -8,8 +8,12 @@ import { useEffect, useState } from "react";
 
 export default function MonsterByName() {
   const { name } = useParams() as { name: string };
-  const [monster, setMonster] = useState<MonsterProps | undefined>();
-  const breadcrumbLinks: BreadCrumbs = [
+  const [monster, setMonster] = useState<MonsterProps>();
+  const breadcrumbLinks: [
+    { text: "Home"; href: "/" },
+    { text: "Monsters"; href: "/monsters" },
+    { text: string }
+  ] = [
     { text: "Home", href: "/" },
     { text: "Monsters", href: "/monsters" },
     { text: `${name}` },

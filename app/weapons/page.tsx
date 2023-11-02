@@ -2,12 +2,18 @@ import { getWeapons } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Weapon } from "@/Types/types";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 export default async function AllWeapons() {
   const weapons = await getWeapons();
+  const breadcrumbLinks: [{ text: "Home"; href: "/" }, { text: "Weapons" }] = [
+    { text: "Home", href: "/" },
+    { text: "Weapons" },
+  ];
 
   return (
     <div>
+      <Breadcrumb links={breadcrumbLinks} />
       <h1 className="text-2xl">All Weapons</h1>
       <ul className="grid grid-cols-4 gap-5">
         {weapons.map(({ id, name, assets }: Weapon) => {
