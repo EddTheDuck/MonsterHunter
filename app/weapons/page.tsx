@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Weapon, Breadcrumbs } from "@/Types/types";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import FilterSelect from "@/components/FilterSelect";
 
 export default async function AllWeapons() {
   const weapons = await getWeapons();
@@ -14,6 +15,7 @@ export default async function AllWeapons() {
   return (
     <div>
       <Breadcrumb links={breadcrumbLinks} />
+      <FilterSelect filterObj={{type: ["long-sword", "short-sword"], rarity: ["rare", "not rare"]}} />
       <h1 className="text-2xl">All Weapons</h1>
       <ul className="grid grid-cols-4 gap-5">
         {weapons.map(({ id, name, assets }: Weapon) => {
