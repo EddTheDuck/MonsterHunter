@@ -2,7 +2,7 @@ import { getMonsters } from "@/api/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Breadcrumbs, Monster } from "@/Types/types";
+import { Breadcrumbs, MonsterProps } from "@/Types/types";
 
 export default async function AllMonsters() {
   const monsters = await getMonsters("", "");
@@ -17,7 +17,7 @@ export default async function AllMonsters() {
       <h1 className="text-2xl">All Monsters</h1>
 
       <ul className="grid grid-cols-4 gap-5">
-        {monsters.map(({ id, name }: Monster) => {
+        {monsters.map(({ id, name }: MonsterProps) => {
           return (
             <Link href={`/monsters/${name}`}>
               <li

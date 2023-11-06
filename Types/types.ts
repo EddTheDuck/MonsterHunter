@@ -1,11 +1,3 @@
-export interface MonsterProps {
-  id: string;
-  name: string;
-  type: "large" | "small";
-  species: string;
-  description: string;
-}
-
 export interface Monster {
   id: number;
   type: "large" | "small";
@@ -13,6 +5,9 @@ export interface Monster {
   species: string;
 }
 
+export interface MonsterProps extends Monster {
+  description: string;
+}
 export interface Weapon {
   id: number;
   type:
