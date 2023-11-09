@@ -15,24 +15,30 @@ export interface Monster {
 
 export interface Weapon {
   id: number;
-  type:
-    | "great-sword"
-    | "long-sword"
-    | "sword-and-shield"
-    | "dual-blades"
-    | "hammer"
-    | "hunting-horn"
-    | "lance"
-    | "gunlance"
-    | "switch-axe"
-    | "charge-blade"
-    | "insect-glaive"
-    | "light-bowgun"
-    | "heavy-bowgun"
-    | "bow";
   name: string;
-  rarity: number;
   assets: { icon: string };
+}
+
+export interface WeaponProps extends Weapon {
+  type:
+  | "great-sword"
+  | "long-sword"
+  | "sword-and-shield"
+  | "dual-blades"
+  | "hammer"
+  | "hunting-horn"
+  | "lance"
+  | "gunlance"
+  | "switch-axe"
+  | "charge-blade"
+  | "insect-glaive"
+  | "light-bowgun"
+  | "heavy-bowgun"
+  | "bow";
+  rarity: number;
+  assets: { icon: string, image: string }
+  attack: { display: number }
+  damageType: "sever" | "blunt" | "piercing" | "slashing"
 }
 
 export interface Armour {
