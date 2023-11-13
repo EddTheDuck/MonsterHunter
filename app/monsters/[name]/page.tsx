@@ -13,7 +13,7 @@ export default function MonsterByName() {
   const breadcrumbLinks: Breadcrumbs = [
     { text: "Home", href: "/" },
     { text: "Monsters", href: "/monsters" },
-    { text: `${name}` },
+    { text: `${decodeURI(name)}` },
   ];
 
   useEffect(() => {
